@@ -1,10 +1,10 @@
 # Ejercicios de programación #
 
-A continuación se colocan unos ejercicios de analisis y programación relacionados con el API de procesos con el objetivo de evaluar la comprensión y uso de dicho API en la solución de problemas de programación en C.
+A continuación se colocan unos ejercicios de análisis y programación relacionados con el API de procesos con el objetivo de evaluar la comprensión y uso de dicho API en la solución de problemas de programación en C.
 
 ## Analisis de código ##
 
-1. Dado el siguiente programa, explique cual es la salida de la linea comentada como ```LINE A```
+1. Dado el siguiente programa, explique cual es la salida de la línea comentada como ```LINE A```
 
 ```C
 #include <sys/types.h>
@@ -27,7 +27,7 @@ int main() {
 }
 ```
 
-2. Incluyendo el proceso padre inicial. ¿Cuantos procesos  son creados por el programa mostrado a continuación?
+2. Incluyendo el proceso padre inicial ¿cuántos procesos son creados por el programa mostrado a continuación?
 
 ```C
 #include <stdio.h>
@@ -43,7 +43,7 @@ int main() {
 }
 ```
 
-3. Incluyendo el proceso padre inicial. ¿Cuantos procesos  son creados por el programa mostrado a continuación?
+3. Incluyendo el proceso padre inicial ¿cuántos procesos  son creados por el programa mostrado a continuación?
 
 ```C
 #include <stdio.h>
@@ -57,7 +57,7 @@ int main() {
 }
 ```
 
-4. En el siguiente código ¿La linea de codigo marcada como ```printf("LINE J")```  imprimira el mensaje?
+4. En el siguiente código ¿la linea de codigo marcada como ```printf("LINE J")```  imprimirá el mensaje?
 
 ```C
 #include <sys/types.h>
@@ -85,7 +85,7 @@ int main() {
 }
 ```
 
-5. Asumiendo que se tienen como pids para el padre y para el hijo los valores de 2600 y 2603 respectivamente. Identifique los valores del pid en las lines comentadas como ```A```, ```B```, ```C``` y ```D```
+5. Asumiendo que se tienen como pids para el padre y para el hijo los valores de 2600 y 2603 respectivamente. Identifique los valores del pid en las líneas comentadas como ```A```, ```B```, ```C``` y ```D```
 
 ```C
 #include <sys/types.h>
@@ -115,7 +115,7 @@ int main() {
 }
 ```
 
-6. Dado el siguiente programa, ¿Cual sería la salida desplegada en las lineas comentadas como ```LINE X``` y como ```LINE Y```?
+6. Dado el siguiente programa, ¿cuál sería la salida desplegada en las líneas comentadas como ```LINE X``` y ```LINE Y```?
 
 ```C
 #include <sys/types.h>
@@ -149,17 +149,17 @@ int main() {
    * ¿Pueden el padre y el hijo acceder al file descriptor retornado por ```open()```?
    * ¿Qué pasa si ellos empiezan a escribir el archivo de manera concurrente, es decir, a la misma vez?
 
-2. Escriba un programa usando fork(). El proceso hijo imprimirá ```"Hello"```; el proceso padre imprimirá ```"goodbye"```. Usted deberá asegurar que el proceso hijo imprima en primer lugar.
+2. Escriba un programa usando fork(). El proceso hijo imprimirá ```"Hello"```; el proceso padre imprimirá ```"goodbye"```. Usted deberá asegurar que el proceso hijo imprima siempre en primer lugar.
 
 3. Escriba un programa que llame ```fork()``` y entonces llame alguna forma de exec() para correr el programa ```/bin/ls```. Intente probar todas las variaciones de la familia de funciones ```exec()``` incluyendo (en linux) ```execl()```, ```execle()```, ```execlp()```, ```execv()```, ```execvp()``` y ```execvpe()```. ¿Por qué piensa usted que existen tantas variaciones para la misma llamada básica?
    
 4. Escriba ahora un programa que use ```wait()``` para esperar que el proceso hijo finalice su ejecución. ¿Cuál es el valor de retorno de la función ```wait()```?, ¿Qué pasa si usted usa la función ```wait``` en el hijo?
 
-5. Haga un programa, como el del ejercicio anterior, con una breve modificación, la cual consiste en usar ```waitpid()``` en lugar de ```wait()```. ¿Cuándo podría ser ```waitpid()``` útil?
+5. Haga un programa como el del ejercicio anterior con una breve modificación la cual consiste en usar ```waitpid()``` en lugar de ```wait()```, ¿cuándo podría ser ```waitpid()``` útil?
 
 6. Escriba un programa que cree dos hijos y conecte la salida estándar de un hijo a la entrada estándar del otro usando la llamada a sistema ```pipe()```.
 
-7. Escriba un programa en C llamadao **time.c** que determine la cantidad de tiempo necesaria para correr un comando desde la linea de comandos. Este programa será ejecutado como "```time <command>```" y mostrará la cantidad de tiempo gastada para ejecutar el comando especificado. Para resolver el problema haga  uso de ```fork()``` y ```exec()```, así como de la función ```gettimeofday()``` para determinar el tiempo transcurrido. 
+7. Escriba un programa en C llamado **time.c** que determine la cantidad de tiempo necesaria para correr un comando desde la línea de comandos. Este programa será ejecutado como "```time <command>```" y mostrará la cantidad de tiempo gastada para ejecutar el comando especificado. Para resolver el problema haga uso de ```fork()``` y ```exec()```, así como de la función ```gettimeofday()``` para determinar el tiempo transcurrido. 
    
    La estrategia general es hacer un fork para crear un proceso hijo el cual ejecutara el comando especificado. Sin embargo, antes de que el proceso hijo ejecute el comando espeficado, debera almacenar el tiempo actual (**starting time**). El padre invocará el wait para esperar por la culminación del proceso hijo. Luego, una vez que el proceso hijo culmine, el padre almacenara el tiempo actual en este punto (**ending time**). La diferencia entre los tiempos **inicial** y **final** (**starting** y **endind**) representará el tiempo gastado para ejecutar el comando. Por ejemplo la salida en pantalla de abajo muestra la cantidad de tiempo para correr el comando ```ls```:
 
