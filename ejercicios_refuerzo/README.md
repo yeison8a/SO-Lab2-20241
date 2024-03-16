@@ -2,7 +2,7 @@
 
 A continuación se colocan unos ejercicios de análisis y programación relacionados con el API de procesos con el objetivo de evaluar la comprensión y uso de dicho API en la solución de problemas de programación en C.
 
-## Analisis de código ##
+## Análisis de código ##
 
 1. Dado el siguiente programa, explique cual es la salida de la línea comentada como ```LINE A```
 
